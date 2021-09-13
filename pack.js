@@ -17,7 +17,7 @@ function pack (filenames, tarPath, cb) {
 
     var tarStream = tar.pack()
     var ws = fs.createWriteStream(tarPath)
-    tarStream.pipe(lzma.createCompressor()).pipe(ws)
+    tarStream.pipe(lzma.createCompressor({ threads: 0 })).pipe(ws)
 
     eachSeries(filenames, function processFile (filename, nextFile) {
       fs.stat(filename, function (err, st) {
