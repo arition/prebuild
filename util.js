@@ -12,7 +12,7 @@ function getTarPath (opts, abi) {
     '-', opts.platform,
     opts.libc,
     '-', opts.arch,
-    '.tar.gz'
+    '.tar.xz'
   ].join(''))
 }
 

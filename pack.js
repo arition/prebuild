@@ -3,7 +3,7 @@ var fs = require('fs')
 var path = require('path')
 var mkdirp = require('mkdirp')
 var tar = require('tar-stream')
-var zlib = require('zlib')
+var lzma = require('lzma-native')
 
 function mode (octal) {
   return parseInt(octal, 8)
@@ -17,7 +17,7 @@ function pack (filenames, tarPath, cb) {
 
     var tarStream = tar.pack()
     var ws = fs.createWriteStream(tarPath)
-    tarStream.pipe(zlib.createGzip({ level: 9 })).pipe(ws)
+    tarStream.pipe(lzma.createCompressor()).pipe(ws)
 
     eachSeries(filenames, function processFile (filename, nextFile) {
       fs.stat(filename, function (err, st) {

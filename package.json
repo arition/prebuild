@@ -1,5 +1,5 @@
 {
-  "name": "prebuild",
+  "name": "@arition/prebuild",
   "version": "10.0.1",
   "description": "A command line tool for easily making prebuilt binaries for multiple versions of node, electron or node-webkit on a specific platform",
   "scripts": {
@@ -28,6 +28,7 @@
     "ghreleases": "^3.0.2",
     "github-from-package": "0.0.0",
     "glob": "^7.1.6",
+    "lzma-native": "^8.0.1",
     "minimist": "^1.1.2",
     "mkdirp": "^0.5.1",
     "napi-build-utils": "^1.0.1",
