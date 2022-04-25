@@ -1,6 +1,6 @@
 {
   "name": "@arition/prebuild",
-  "version": "10.1.1",
+  "version": "11.0.3",
   "description": "A command line tool for easily making prebuilt binaries for multiple versions of node, electron or node-webkit on a specific platform",
   "scripts": {
     "test": "verify-travis-appveyor && tape test && npm run lint",
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "cmake-js": "~5.2.0",
-    "detect-libc": "^1.0.3",
+    "detect-libc": "^2.0.0",
     "each-series-async": "^1.0.1",
     "execspawn": "^1.0.1",
     "ghreleases": "^3.0.2",
@@ -32,7 +32,7 @@
     "minimist": "^1.1.2",
     "mkdirp": "^0.5.1",
     "napi-build-utils": "^1.0.1",
-    "node-abi": "^2.2.0",
+    "node-abi": "^3.0.0",
     "node-gyp": "^6.0.1",
     "node-ninja": "^1.0.1",
     "noop-logger": "^0.1.0",
@@ -71,6 +71,6 @@
   },
   "homepage": "https://github.com/prebuild/prebuild",
   "engines": {
-    "node": ">=6"
+    "node": ">=10"
   }
 }
